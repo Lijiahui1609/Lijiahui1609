@@ -1,172 +1,169 @@
-/* 全局样式重置 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f9faff;
-    color: #333;
-    line-height: 1.6;
+  margin: 0;
+  background: #eef1f4;
+  color: #333;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+.page {
+  max-width: 980px;
+  margin: 32px auto;
+  padding: 42px 54px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* 头部信息 */
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-    flex-wrap: wrap;
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  align-items: center;
+  padding-bottom: 28px;
+  border-bottom: 5px solid #1f4e6d;
 }
 
-.avatar-container {
-    flex-shrink: 0;
+.profile-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
-.avatar-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #fff3cd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  background: #1f4e6d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.avatar-placeholder {
-    width: 100%;
-    height: 100%;
-    background-color: #e9ecef;
-    /* 你可以把背景色换成头像图片：
-    background-image: url('你的头像地址');
-    background-size: cover;
-    background-position: center;
-    */
+h1 {
+  margin: 0;
+  font-size: 42px;
+  color: #1f4e6d;
+  letter-spacing: 0.5px;
 }
 
-.profile-info {
-    flex-grow: 1;
+.role {
+  margin-top: 8px;
+  color: #555;
+  font-size: 17px;
 }
 
-.name {
-    font-size: 2.8rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 10px;
+.profile-card {
+  min-width: 300px;
+  background: #1f4e6d;
+  color: white;
+  padding: 20px 26px;
 }
 
-.title {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 8px;
+.profile-card h2 {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.5px;
 }
 
-.research {
-    font-size: 1.1rem;
-    color: #666;
+.profile-card p {
+  margin: 8px 0;
+  font-size: 14px;
 }
 
-.contact-card {
-    background: linear-gradient(135deg, #e8e0ff 0%, #f0e6ff 100%);
-    padding: 30px;
-    border-radius: 12px;
-    min-width: 280px;
-}
-
-.contact-item {
-    margin-bottom: 25px;
-}
-
-.contact-item:last-child {
-    margin-bottom: 0;
-}
-
-.contact-item h3 {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 5px;
-}
-
-.contact-item p {
-    color: #555;
-    word-break: break-all;
-}
-
-/* 通用区块样式 */
-.section {
-    margin-bottom: 50px;
+section {
+  margin-top: 34px;
 }
 
 .section-title {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 6px 18px;
+  background: #1f4e6d;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.5px;
 }
 
-.section-title::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, #a855f7 0%, transparent 70%);
-    border-radius: 50%;
+p {
+  margin: 0 0 12px;
+  color: #444;
 }
 
-/* 时间线样式 */
-.timeline {
-    padding-left: 20px;
-    border-left: 2px solid #e0e0e0;
+.two-column {
+  columns: 2;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
-.timeline-item {
-    position: relative;
-    padding: 10px 0;
-    padding-left: 20px;
+.two-column li {
+  margin-bottom: 8px;
 }
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 18px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #d8b4fe;
-    border: 3px solid #fff;
+.item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 28px;
+  padding: 18px 0;
+  border-bottom: 1px solid #e3e6e8;
 }
 
-.content p {
-    margin-bottom: 12px;
-    font-size: 1.05rem;
-    color: #444;
+.time {
+  color: #1f4e6d;
+  font-weight: 700;
 }
 
-/* 响应式适配 */
-@media (max-width: 900px) {
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
+.content h3 {
+  margin: 0 0 6px;
+  color: #333;
+  font-size: 18px;
+}
 
-    .contact-card {
-        width: 100%;
-    }
+a {
+  color: #1f4e6d;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    .name {
-        font-size: 2.2rem;
-    }
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .page {
+    margin: 0;
+    padding: 28px 24px;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-card {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .two-column {
+    columns: 1;
+  }
 }
