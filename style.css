@@ -1,53 +1,172 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.7;
-  background: #f7f8fa;
-  color: #222;
+    background-color: #f9faff;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 48px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.hero {
-  padding: 56px 0 40px;
+/* 头部信息 */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
 }
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 8px;
+.avatar-container {
+    flex-shrink: 0;
 }
 
-.subtitle {
-  font-size: 20px;
-  color: #555;
+.avatar-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff3cd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-section {
-  margin-bottom: 44px;
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #e9ecef;
+    /* 你可以把背景色换成头像图片：
+    background-image: url('你的头像地址');
+    background-size: cover;
+    background-position: center;
+    */
 }
 
-h2 {
-  border-bottom: 2px solid #222;
-  padding-bottom: 8px;
+.profile-info {
+    flex-grow: 1;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  margin: 16px 0;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+.name {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
 }
 
-a {
-  color: #0969da;
-  text-decoration: none;
+.title {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 8px;
 }
 
-a:hover {
-  text-decoration: underline;
+.research {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #e8e0ff 0%, #f0e6ff 100%);
+    padding: 30px;
+    border-radius: 12px;
+    min-width: 280px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item h3 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #555;
+    word-break: break-all;
+}
+
+/* 通用区块样式 */
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+/* 时间线样式 */
+.timeline {
+    padding-left: 20px;
+    border-left: 2px solid #e0e0e0;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 10px 0;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 18px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #d8b4fe;
+    border: 3px solid #fff;
+}
+
+.content p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+/* 响应式适配 */
+@media (max-width: 900px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
+
+    .name {
+        font-size: 2.2rem;
+    }
 }
